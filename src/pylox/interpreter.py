@@ -460,7 +460,6 @@ class Interpreter(Visitor[LoxType]):
         raise Return(return_value)
 
     def visit_ClassDef(self, class_def: ClassDef) -> None:
-
         # We want `super` to be defined in a new environment
         class_environment = self.environment
         super_environment = Environment(class_environment)

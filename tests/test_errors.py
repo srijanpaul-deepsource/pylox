@@ -192,19 +192,19 @@ def test_parse_fail_files(
     (
         ("x;", "Undefined variable 'x'"),
         ("print -true;", "Expected 'Integer' or 'Float' for unary '-', got 'Boolean'"),
-#        ("2 > '3';", "Unsupported types for '>': 'Integer' and 'String'"),
-#        ("nil();", "'nil' object is not callable"),
-#        ("fun f(){} f.foo;", "Cannot access properties inside 'Function'"),
-#        ("class C {} C.foo = 5;", "Cannot set properties on 'Class'"),
-#        (
-#            "var x = true; class C < x {}",
-#            "Can only inherit from classes, found 'Boolean'",
-#        ),
-#        ("class C {} var c = C(); c.foo();", "'C' object has no attribute 'foo'"),
-#        ("print 3 / 0;", "Division by zero"),
-#        ("fun f(a) {print a;} f();", "<function 'f'> expected 1 arguments, got 0"),
-#        ("class C {init(a, b) {}} C(10);", "<class 'C'> expected 2 arguments, got 1"),
-#        ("dir(5.5);", "dir() can only be used on classes and objects, not 'Float'"),
+        #        ("2 > '3';", "Unsupported types for '>': 'Integer' and 'String'"),
+        #        ("nil();", "'nil' object is not callable"),
+        #        ("fun f(){} f.foo;", "Cannot access properties inside 'Function'"),
+        #        ("class C {} C.foo = 5;", "Cannot set properties on 'Class'"),
+        #        (
+        #            "var x = true; class C < x {}",
+        #            "Can only inherit from classes, found 'Boolean'",
+        #        ),
+        #        ("class C {} var c = C(); c.foo();", "'C' object has no attribute 'foo'"),
+        #        ("print 3 / 0;", "Division by zero"),
+        #        ("fun f(a) {print a;} f();", "<function 'f'> expected 1 arguments, got 0"),
+        #        ("class C {init(a, b) {}} C(10);", "<class 'C'> expected 2 arguments, got 1"),
+        #        ("dir(5.5);", "dir() can only be used on classes and objects, not 'Float'"),
     ),
 )
 def test_interpreter_fail(source: str, error: str) -> None:
